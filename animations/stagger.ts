@@ -1,10 +1,9 @@
 const stagger = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
+  animate: {
+    transition: {
+      staggerChildren: .1,
     },
-  };
-  
-  export default stagger;
-  
+  },
+};
+
+export default stagger;

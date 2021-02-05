@@ -3,81 +3,60 @@ import { AlbumCard } from "../components/AlbumCard";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import stagger from "../animations/stagger";
+import fadeInUp from "../animations/fadeInUp";
 
 const mockedCover = [
   {
     cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-450-Paul-mcCartney-RAM.jpg?w=800",
+      "https://portalfamosos.com.br/wp-content/uploads/2020/07/EKkYukOUUAEdCwR.png",
+    name: "when we all fall asleep where do we go",
+    artist: "Billie Eilish - 2019",
   },
   {
     cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-449-WhiteStripesELEPHANT.jpg?w=800",
+      "http://loggado.com/wp-content/uploads/2017/06/Lorde-Melodrama-2.jpg",
+    name: "Melodrama",
+    artist: "Lorder - 2017",
+  },
+  {
+    cover: "https://images-na.ssl-images-amazon.com/images/I/71sHlq8VDQL.jpg",
+    name: "25",
+    artist: "Adelle - 2015",
   },
   {
     cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-448-Otis-Redding-Dictionary-of-Soul.jpg?w=800",
+      "https://images-na.ssl-images-amazon.com/images/I/71DX9fQhSHL._SL1212_.jpg",
+    name: "Beerbongs & bentleys",
+    artist: "Post Malone - 2018",
   },
   {
     cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-447-bad-bunny-X100pre.jpg?w=800",
+      "https://images-na.ssl-images-amazon.com/images/I/71xNOkPaOHL._AC_SX425_.jpg",
+    name: "If You're Reading This It's Too Late",
+    artist: "Drake - 2015",
   },
   {
     cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-446-Alice-Coltrane-Journey-in-Satchidanada.jpg?w=800",
+      "http://lojasaraiva.vteximg.com.br/arquivos/ids/2683306/1002918405.jpg?v=637020949757800000",
+    name: "Beauty Behind the Madness",
+    artist: "The Weeknd - 2015",
   },
   {
     cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-445-yes-Close-to-the-Edge.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-444-Fiona-Apple-Extraordinary-Machine.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-443-David-Bowie-Scary-Monsters.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-442-Weeknd-beauty-behind-the-madness.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-441-Britney-Spears-Blackout.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-440-Loretta-Lynn-Coal-Miner_s-Daughter.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-439-James-Brown-Sex-Machine.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-438-Blur-Parklife.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-437-Primal-Scream-Screamadelica.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-436-Tupac-all-Eyez-on-Me.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-435-Pet-Shop-Boys-Actually.jpg?w=800",
-  },
-  {
-    cover:
-      "https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-434-Pavement-CROOKED-RAIN.jpg?w=800",
+      "https://images-na.ssl-images-amazon.com/images/I/612luc2DEML._AC_SL1000_.jpg",
+    name: "Future Nostalgia",
+    artist: "Dua Lipe - 2019",
   },
 ];
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <motion.div
+      exit={{ opacity: 0 }}
+      initial="initial"
+      animate="animate"
+      className={styles.container}
+    >
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -91,10 +70,14 @@ export default function Home() {
       >
         <h1>Musics App</h1>
         <motion.div variants={stagger} className={styles.albums}>
-          {mockedCover.map(({ cover }) => (
-            <div className="album" key={cover}>
-              <AlbumCard cover={cover} />
-            </div>
+          {mockedCover.map(({ cover, name, artist }) => (
+            <motion.div
+              className="album"
+              key={cover}
+              variants={fadeInUp()}
+            >
+              <AlbumCard name={name} artist={artist} cover={cover} />
+            </motion.div>
           ))}
         </motion.div>
       </motion.main>
@@ -106,9 +89,9 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          <motion.img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
-    </div>
+    </motion.div>
   );
 }
