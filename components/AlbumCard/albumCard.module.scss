@@ -1,6 +1,6 @@
 .container {
   border: 0.5px solid #f0f0f0;
-  background: #F9F9F9;
+  background: #f9f9f9;
   border-radius: 8px;
   .cover {
     position: relative;
@@ -29,7 +29,7 @@
     text-align: center;
     margin-top: 20px;
     color: rgba(0, 0, 0, 0.77);
-
+    
     .albumName {
       font-family: "Big Shoulders Display";
       font-style: normal;
@@ -37,6 +37,9 @@
       line-height: 57px;
       display: block;
       font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 230px;
     }
 
     .albumInfo {
@@ -47,6 +50,12 @@
       line-height: 29px;
       display: block;
       font-weight: 300;
+    }
+
+    .tooltip{
+      font-size: 20px;
+      background: rgb(75, 75, 75);
+      border-radius: 8px;
     }
   }
 }
