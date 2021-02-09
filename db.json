@@ -1,0 +1,39 @@
+{
+    "musics": [
+        {
+          "cover": "https://i2.wp.com/tracklist.com.br/wp-content/uploads/2019/03/D2zCwXdU4AAnzHN.jpg?fit=1024%2C1024&ssl=1",
+          "name": "when we all fall asleep where do we go",
+          "artist": "Billie Eilish - 2019"
+        },
+        {
+          "cover": "http://loggado.com/wp-content/uploads/2017/06/Lorde-Melodrama-2.jpg",
+          "name": "Melodrama",
+          "artist": "Lorder - 2017"
+        },
+        {
+          "cover": "https://images-na.ssl-images-amazon.com/images/I/71sHlq8VDQL.jpg",
+          "name": "25",
+          "artist": "Adelle - 2015"
+        },
+        {
+          "cover": "https://images-na.ssl-images-amazon.com/images/I/71DX9fQhSHL._SL1212_.jpg",
+          "name": "Beerbongs & bentleys",
+          "artist": "Post Malone - 2018"
+        },
+        {
+          "cover": "https://images-na.ssl-images-amazon.com/images/I/71xNOkPaOHL._AC_SX425_.jpg",
+          "name": "If You're Reading This It's Too Late",
+          "artist": "Drake - 2015"
+        },
+        {
+          "cover": "http://lojasaraiva.vteximg.com.br/arquivos/ids/2683306/1002918405.jpg?v=637020949757800000",
+          "name": "Beauty Behind the Madness",
+          "artist": "The Weeknd - 2015"
+        },
+        {
+          "cover": "https://images-na.ssl-images-amazon.com/images/I/612luc2DEML._AC_SL1000_.jpg",
+          "name": "Future Nostalgia",
+          "artist": "Dua Lipa - 2019"
+        }
+    ]
+}
