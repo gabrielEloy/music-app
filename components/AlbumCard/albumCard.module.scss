@@ -1,7 +1,8 @@
 .container {
-  border: 0.5px solid #f0f0f0;
-  background: #f9f9f9;
+  border: 0.5px solid #313131;
+  background: #353535;
   border-radius: 8px;
+  cursor: pointer;
   .cover {
     position: relative;
     .imageContainer {
@@ -28,7 +29,7 @@
   .info {
     text-align: center;
     margin-top: 20px;
-    color: rgba(0, 0, 0, 0.77);
+    color: rgb(204, 204, 204);
     
     .albumName {
       font-family: "Big Shoulders Display";
@@ -56,6 +57,7 @@
       font-size: 20px;
       background: rgb(75, 75, 75);
       border-radius: 8px;
+      color: white;
     }
   }
 }

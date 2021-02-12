@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .coverContainer{
+      width: 400px;
+      height: 350px;
+      margin-bottom: 100px;
+      margin-right: 50px;
+      border-radius: 8px;
+      background-size: cover;
+  }
+  header{
+    height: 50px;
+    width: 100%;
+}
+
+  .footerPoligon_left{
+    clip-path: polygon(100% 67%, 0% 100%, 100% 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(258.96deg, #FFFFFF -12.25%, rgba(0, 0, 0, 0.46) 56.57%), #8E8E8E;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+  }
+  
+  .footerPoligon_right{
+    clip-path: polygon(100% 67%, 0% 100%, 100% 100%);
+    background: #454545;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+  }
+}

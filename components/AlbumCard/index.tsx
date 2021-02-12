@@ -5,7 +5,7 @@ import fadeInRight from "../../animations/fadeInRight";
 import fadeInUp from "../../animations/fadeInUp";
 import { ellipsisText } from "../../helpers/textFormatters";
 import ReactTooltip from 'react-tooltip';
-
+import Link from "next/link";
 interface Props {
   cover: string;
   name: string;
@@ -14,6 +14,11 @@ interface Props {
 
 export const AlbumCard = ({ cover, name, artist }: Props) => {
   return (
+    <Link 
+      key={name} 
+      href='/album/[albumName]'
+      as={`/album/${name}`}
+    >
     <div className={styles.container}>
      <div className={styles.cover}>
          <motion.div 
@@ -30,5 +35,6 @@ export const AlbumCard = ({ cover, name, artist }: Props) => {
             <span className={styles.albumInfo}>{artist}</span>
      </motion.div>
     </div>
+    </Link >
   );
 };
